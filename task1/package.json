@@ -1,0 +1,18 @@
+{
+  "name": "fcsm306-lab04-task1",
+  "version": "1.0.0",
+  "description": "Distributed Socket.IO chat with load balancing and fault tolerance.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "server:a": "node src/server.js A 8001 8002",
+    "server:b": "node src/server.js B 8002 8001",
+    "gateway": "node src/gateway.js",
+    "start": "node src/start-all.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  }
+}

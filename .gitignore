@@ -1,0 +1,19 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Build outputs
+*.exe
+*.out
+*.o
+*.obj
+
+# Lab generated data
+task2/*.csv
+task2/*.svg
+__pycache__/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab04 Distributed Chat</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel sidebar">
+        <h1>Distributed Chat</h1>
+
+        <form id="connect-form" class="connect-form">
+          <label for="client-id">Client ID</label>
+          <div class="row">
+            <input id="client-id" name="client-id" type="number" min="0" value="1" required>
+            <button type="submit">Connect</button>
+          </div>
+        </form>
+
+        <div class="status-grid">
+          <div>
+            <span class="label">Current server</span>
+            <strong id="current-server">-</strong>
+          </div>
+          <div>
+            <span class="label">Route</span>
+            <strong id="route-reason">-</strong>
+          </div>
+          <div>
+            <span class="label">Server A</span>
+            <strong id="server-a">unknown</strong>
+          </div>
+          <div>
+            <span class="label">Server B</span>
+            <strong id="server-b">unknown</strong>
+          </div>
+        </div>
+
+        <section class="client-panel">
+          <h2>Connected Here</h2>
+          <ul id="client-list"></ul>
+        </section>
+      </section>
+
+      <section class="panel chat-panel">
+        <header class="chat-header">
+          <div>
+            <h2>Messages</h2>
+            <p id="connection-state">Disconnected</p>
+          </div>
+          <button id="refresh-status" type="button">Refresh</button>
+        </header>
+
+        <div id="messages" class="messages"></div>
+
+        <form id="message-form" class="message-form">
+          <input id="message-input" type="text" autocomplete="off" placeholder="Message" disabled>
+          <button id="send-button" type="submit" disabled>Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
