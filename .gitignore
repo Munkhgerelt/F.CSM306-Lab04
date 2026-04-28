@@ -11,6 +11,8 @@ npm-debug.log*
 # Lab generated data
 task2/*.csv
 task2/*.svg
+task2/.ipynb_checkpoints
+task2/*.png
 __pycache__/
 
 # OS/editor

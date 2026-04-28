@@ -175,11 +175,12 @@ function renderClients(clients) {
 
 function appendMessage(message) {
   const item = document.createElement("article");
-  item.className = "message";
+  const isOwnMessage = String(message.fromClientId) === String(state.clientId);
+  item.className = `message ${isOwnMessage ? "message--own" : "message--other"}`;
 
   const meta = document.createElement("div");
   meta.className = "message-meta";
-  meta.textContent = `Client ${message.fromClientId} via Server ${message.fromServer}`;
+  meta.textContent = `${isOwnMessage ? "You" : `Client ${message.fromClientId}`} via Server ${message.fromServer}`;
 
   const text = document.createElement("p");
   text.textContent = message.text;

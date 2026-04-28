@@ -187,11 +187,26 @@ p {
   padding: 10px 12px;
 }
 
+.message--own {
+  align-self: flex-end;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  text-align: right;
+}
+
+.message--other {
+  align-self: flex-start;
+}
+
 .message-meta {
   color: var(--orange);
   font-size: 12px;
   font-weight: 700;
   margin-bottom: 4px;
+}
+
+.message--own .message-meta {
+  color: var(--blue);
 }
 
 .message p {
